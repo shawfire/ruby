@@ -38,7 +38,7 @@ class Atm
 
   # An Atm can despense cash and a Person can withdraw cash
   #
-  # >> melb_atm = Atm.new("Melbourne", 10000)
+  # >> melb_atm = Atm.new(location: "Melbourne", current_balance: 10000)
   # >> melb_atm.location
   # => "Melbourne"
   # >> melb_atm.current_balance
@@ -58,7 +58,7 @@ class Atm
 
   # An Atm can take cash and a Person can deposit cash
   #
-  # >> melb_atm = Atm.new("Melbourne", 10000)
+  # >> melb_atm = Atm.new(location: "Melbourne", current_balance: 10000)
   # >> melb_atm.current_balance
   # => 10000
   # >> melb_atm.take(50)
@@ -103,7 +103,7 @@ class Person
 
   # A Person can withdraw cash
   #
-  # >> melb_atm = Atm.new("Melbourne", 10000)
+  # >> melb_atm = Atm.new(location: "Melbourne", current_balance: 10000)
   # >> melb_atm.current_balance
   # => 10000
   # >> john = Person.new("John")
@@ -126,7 +126,7 @@ class Person
 
   # A Person can deposit cash
   #
-  # >> melb_atm = Atm.new("Melbourne", 10000)
+  # >> melb_atm = Atm.new(location: "Melbourne", current_balance: 10000)
   # >> john = Person.new("John")
   # >> john.balance
   # => 100
@@ -150,7 +150,7 @@ end
 
 # Iterative testing
 
-collingwood_atm = Atm.new("Collingwood", 10000)
+collingwood_atm = Atm.new(location: "Collingwood", current_balance: 10000)
 
 # puts collingwood_atm.location=("Sydney")
 
