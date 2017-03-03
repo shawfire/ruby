@@ -1,4 +1,4 @@
-# Trent Example lesson: 20170221 Tuesday
+# Example lesson: 20170221 Tuesday
 #
 # Problem:
 #   I'll be in the street ans I realise I need to withdraw $100 from an atm.
