@@ -28,21 +28,11 @@ class Cafe
 
   @@coffees = ["3/4 Latte", "Regular Latte"]
   @@cafes = []
-  @@location = [isle 1..20][shelf 1..5][position 1..5]
-  [ false, ]
-  isles.each 1..20 do |isle|
-      shelfs.each 1..20 do |shelf|
-          positions.each 1..20 do |position|
-             @@location[isle][shelf][position] = false
-
-             locations.csv
-             items.csv
 
   def initialize(name:, location:)
     @name = name
     @location = location
     @@cafes.push(self)
-    @@location[1][3][5] = true
   end
 
   # Cafe can ... ?
