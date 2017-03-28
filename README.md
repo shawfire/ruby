@@ -78,13 +78,14 @@ $ rbenv rehash  # ruby env manager
 + --order defined (by default), --order random
 + specify default configurations in (in order of precidence)
   + Global: ~/.rspec (example .rspec file contents below:)
-```
---color
-```
+  ```
+  --color
+  ```
   + Project specific (in version control): ./.rspec
   + Local (not in version control): ./.rspec-local
   + Command line
   + Inside RSpec code not recommend.
+
 
 # Using RSpec
 ```
