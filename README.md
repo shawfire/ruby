@@ -87,7 +87,8 @@ $ rbenv rehash  # ruby env manager
   + Inside RSpec code not recommend.
 
 
-# Using RSpec [RSpec cheat sheet](http://www.rubypigeon.com/posts/rspec-expectations-cheat-sheet/)
+# Using RSpec
++ [(RSpec cheat sheet)](http://www.rubypigeon.com/posts/rspec-expectations-cheat-sheet/)
 ```
 $ mkdir cat_project
 $ cd !$
@@ -100,4 +101,13 @@ $ touch spec/cat_spec.rb
 $ touch lib/cat.rb
 $ rspec
 ```
-+ create spec/cat_spec.rb
+```
+  Ruby Project Directory Structure:
+    + cat_project
+      + lib
+        - cat.rb
+      + spec
+        - cat_spec.rb
+      .rspec              # Ruby 
+      init.rb             # Main Ruby program
+```
