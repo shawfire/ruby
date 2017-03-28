@@ -21,7 +21,7 @@ User stories:
 + Excellent communication tool with developers
 + Excellent communication tool with clients
 + Describes a single step in the user experience
-++ Given... When... Then...
+  + Given... When... Then...
 
 Example User Story #1
 + <b>Given</b> that a user is not logged in
@@ -71,9 +71,9 @@ $ rbenv rehash  # ruby env manager
 ```
 
 # RSpec configurations:
-+ --no-color (by default), <b>--color</b>
-+ --format progress (by default), --format documentation
-+ --no-profile (by default), --profile
++ --no-color (by default), <b>--color</b> (or -c for short)
++ --format progress (by default), --format documentation (or -f d for short)
++ --no-profile (by default), --profile (or -p)
 + --no-fail-fast (by default), --fail-fast
 + --order defined (by default), --order random
 + specify default configurations in (in order of precidence)
@@ -87,7 +87,7 @@ $ rbenv rehash  # ruby env manager
   + Inside RSpec code not recommend.
 
 
-# Using RSpec
+# Using RSpec [RSpec cheat sheet](http://www.rubypigeon.com/posts/rspec-expectations-cheat-sheet/)
 ```
 $ mkdir cat_project
 $ cd !$
