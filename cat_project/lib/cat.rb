@@ -20,6 +20,7 @@ class Cat
   end
 
   def self.bowl_names_for_cats(cats)
+    cats.map{|cat| cat.name.upcase }
   end
 
   def self.oldest_cat_in(cats)
