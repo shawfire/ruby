@@ -91,7 +91,7 @@ $ rbenv rehash  # ruby env manager
 + [(RSpec cheat sheet)](http://www.rubypigeon.com/posts/rspec-expectations-cheat-sheet/)
 ```
 $ mkdir cat_project
-$ cd !$
+$ cd !$             # cd cat_project
 $ mkdir spec
 $ mkdir lib
 $ rspec --init
@@ -108,6 +108,6 @@ $ rspec
         - cat.rb
       + spec
         - cat_spec.rb
-      .rspec              # Ruby 
+      .rspec              # Ruby
       init.rb             # Main Ruby program
 ```

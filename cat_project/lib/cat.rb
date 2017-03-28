@@ -17,6 +17,7 @@ class Cat
   end
 
   def self.colors_for_cats(cats)
+    cats.map{|cat| cat.color }.uniq
   end
 
   def self.bowl_names_for_cats(cats)
