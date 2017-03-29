@@ -22,14 +22,20 @@ describe 'Cat' do
   end
 
   describe 'attributes' do
+    before do
+      @cat = Cat.new('Max', :black, 3)
+    end
+
     it "allows reading of :color" do
-      cat = Cat.new('Max', :black, 3)
-      expect(cat.color).to eq(:black)
+      expect(@cat.color).to eq(:black)
     end
 
     it "allows reading of age" do
-      cat = Cat.new('Max', :black, 3)
-      expect(cat.age).to eq(3)
+      expect(@cat.age).to eq(3)
+    end
+
+    it "allows reading of name" do
+      expect(@cat.name).to eq('Max')
     end
   end
 
@@ -41,8 +47,28 @@ describe 'Cat' do
     end
   end
 
+  # def test_select_colors
+  #     colors = Cat.cats_with_color(@cats, :black)
+  #     assert_equal(colors, [
+  #         Cat.new('Purry', :black, 2)
+  #     ])
+  #
+  #     colors = Cat.cats_with_color(@cats, :fawn)
+  #     assert_equal(colors, [
+  #         Cat.new('Feral', :fawn, 12),
+  #         Cat.new('Tiny', :fawn, 18)
+  #     ])
+  #
+  #     colors = Cat.cats_with_color(@cats, :pink)
+  #     assert_equal(colors, [])
+  # end
   describe ".cats_with_color(cats, color)" do
-    
+    it "returns cats that are white" do
+      expect(Cat.cats_with_color(@cats, :white)).to eq([
+          Cat.new('Scratchy', :white, 7),
+          Cat.new('Leo', :white, 4)
+      ])
+    end
   end
 
   describe ".colors_for_cats(cats)" do
@@ -51,6 +77,10 @@ describe 'Cat' do
     end
   end
 
-  describe ".oldest_cat_in(cats)"
+  describe ".oldest_cat_in(cats)" do
+    it "returns the oldest cat" do
+      expect(Cat.oldest_cat_in(@cats)).to eq(Cat.new('Tiny', :fawn, 18))
+    end
+  end
 
 end
