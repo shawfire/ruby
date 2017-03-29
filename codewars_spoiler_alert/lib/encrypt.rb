@@ -15,34 +15,34 @@ def encrypt(text, n)
     #   i is it's index / position in a
     a.each_with_index{|c, i| i % 2 == 0 ? even_chars << c : odd_chars << c}
     a = odd_chars + even_chars  # joins the two arrays together to form a
-
-    # trace statement
-    #puts "odd_chars=#{odd_chars.join}, even_chars=#{even_chars.join}, a=#{a.join}"
-
+    #puts "odd_chars=#{odd_chars.join}, even_chars=#{even_chars.join}, a=#{a.join}" #trace
   end
   a.join  # return the encrypted array of characters (a) as a string
 end
 
+# Pseudocode:
+# => text to decode (t)
+# => Split text to two halfs - first half (fh) and second half (sh)
+# => built decoded array (da) by adding a character from sh (shc)
+# => then a character from fh (fhc) and so on till both halfs are processed.
+# => return the the da as a string
 def decrypt(text, n)
-  puts "decrypt(#{text}, #{n})"
-  # where a is the array of characters to encrypt
-  a = text.split('')
+  # puts "decrypt(#{text}, #{n})" # trace
+  t = text
   (1..n).each do
-    even_chars = [] # even_chars are from index 0, 2, 4, ...
-    odd_chars = []
-    # where c is the charater in a and
-    # => i is it's index / position in a
-    a.each_with_index{|c, i| i % 2 == 0 ? even_chars << c : odd_chars << c}
-    a = even_chars.reverse + odd_chars.reverse  # joins the two arrays together to form a
-
-    # trace statement
-    puts "odd_chars=#{odd_chars.join}, even_chars=#{even_chars.join}, a=#{a.join}"
-
+    da = []
+    half_len = text.length/2
+    fh = text[0,half_len]
+    sh = text[half_len,half_len+1]
+    # puts "fh='#{fh}', sh='#{sh}'" #trace
+    (0..(half_len+1)).each do |i|
+      da << sh[i] << fh[i]
+    end
+    t = da.join
   end
-  a.join  # return the encrypted array of characters (a) as a string
+  return t
 end
 
-# it "returns string decrypted 1 time" do
-#   expect(decrypt("bdac",1)).to eq("abcd")
-# end
-decrypt("bdac",1)
+# Troubleshooting test via with ruby lib/encrypt.rb
+# decrypt("bdac",1) # => "abcd"
+# puts "'#{decrypt('hsi  etTi sats!',1)}'" # => "This is a test!"
