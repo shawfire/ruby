@@ -38,7 +38,7 @@ describe 'Encrypt' do
     end
   end
 
-  describe 'decrypt' do
+  context 'decrypt' do
     it "returns string decrypted 0 times" do
       expect(decrypt("This is a test!",0)).to eq("This is a test!")
     end
@@ -54,7 +54,6 @@ describe 'Encrypt' do
     it "returns string decrypted 2 times" do
       expect(decrypt("s eT ashi tist!",2)).to eq("This is a test!")
     end
-
 
   end
 
