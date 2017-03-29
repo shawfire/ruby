@@ -24,4 +24,7 @@ def encrypt(text, n)
 end
 
 def decrypt(text, n)
+  if (n == 0)
+    return text
+  end
 end
