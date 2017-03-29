@@ -31,9 +31,9 @@ def decrypt(text, n)
   t = text
   (1..n).each do
     da = []
-    half_len = text.length/2
-    fh = text[0,half_len]
-    sh = text[half_len,half_len+1]
+    half_len = t.length/2
+    fh = t[0,half_len]
+    sh = t[half_len,half_len+1]
     # puts "fh='#{fh}', sh='#{sh}'" #trace
     (0..(half_len+1)).each do |i|
       da << sh[i] << fh[i]

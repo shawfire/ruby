@@ -51,7 +51,7 @@ describe 'Encrypt' do
       expect(decrypt("hsi  etTi sats!",1)).to eq("This is a test!")
     end
 
-    xit "returns string decrypted 2 times" do
+    it "returns string decrypted 2 times" do
       expect(decrypt("s eT ashi tist!",2)).to eq("This is a test!")
     end
 
