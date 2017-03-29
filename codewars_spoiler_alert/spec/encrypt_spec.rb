@@ -14,7 +14,13 @@ describe 'Encrypt' do
     it "returns string encrypted 2 times" do
       expect(encrypt("This is a test!",2)).to eq("s eT ashi tist!")
     end
-
   end
+
+  describe 'decrypt' do
+    it "returns string decrypted 0 times" do
+      expect(decrypt("This is a test!",0)).to eq("This is a test!")
+    end
+  end
+
 
 end

@@ -15,7 +15,10 @@ def encrypt(text, n)
     #   i is it's index / position in a
     a.each_with_index{|c, i| i % 2 == 0 ? even_chars << c : odd_chars << c}
     a = odd_chars + even_chars  # joins the two arrays together to form a
+
+    # trace statement
     puts "odd_chars=#{odd_chars.join}, even_chars=#{even_chars.join}, a=#{a.join}"
+
   end
   a.join  # return the encrypted array of characters (a) as a string
 end
