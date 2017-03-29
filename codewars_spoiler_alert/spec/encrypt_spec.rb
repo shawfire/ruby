@@ -10,6 +10,11 @@ describe 'Encrypt' do
     it "returns string encrypted 1 time" do
       expect(encrypt("This is a test!",1)).to eq("hsi  etTi sats!")
     end
+
+    it "returns string encrypted 2 times" do
+      expect(encrypt("This is a test!",2)).to eq("s eT ashi tist!")
+    end
+
   end
 
 end
