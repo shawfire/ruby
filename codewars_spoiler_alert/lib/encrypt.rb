@@ -22,3 +22,6 @@ def encrypt(text, n)
   end
   a.join  # return the encrypted array of characters (a) as a string
 end
+
+def decrypt(text, n)
+end
